@@ -5,12 +5,14 @@ const userRoutes = require("./api/users/users.routes");
 const passport = require("passport");
 const { localStrategy, jwtStrategy } = require("./middleware/passport");
 const cors = require("cors");
+const recipesRoutes = require("./api/recipes/recipes.routes");
+
 
 const app = express();
 connectDb();
 app.use(express.json());
-app.use(cors());
 
+app.use(recipesRoutes);
 app.use("/categories", categoriesRoutes);
 // app.use((req, res, next) => {
 //   const err = new Error("Not Found");
