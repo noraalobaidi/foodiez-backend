@@ -1,7 +1,10 @@
 const connectDb = require("./database");
 const express = require("express");
-const categoriesRoutes = require("./categories/categories.routes");
-//const cors = require("cors");
+const categoriesRoutes = require("./api/categories/categories.routes");
+const userRoutes = require("./api/users/users.routes");
+const passport = require("passport");
+const { localStrategy, jwtStrategy } = require("./middleware/passport");
+const cors = require("cors");
 
 const app = express();
 connectDb();
