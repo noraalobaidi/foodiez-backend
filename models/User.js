@@ -6,6 +6,7 @@ const UserSchema = new Schema({
     unique: true,
   },
   password: String,
+  recipes: [{ type: Schema.Types.ObjectId, ref: "Recipe" }],
 });
 
 module.exports = model("User", UserSchema);
