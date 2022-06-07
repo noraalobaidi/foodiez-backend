@@ -8,7 +8,6 @@ const cors = require("cors");
 const app = express();
 connectDb();
 app.use(express.json());
-app.use(cors());
 
 app.use(recipesRoutes);
 app.use("/categories", categoriesRoutes);
