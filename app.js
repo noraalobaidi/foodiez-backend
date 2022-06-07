@@ -1,8 +1,11 @@
 const connectDb = require("./database");
 const express = require("express");
 const categoriesRoutes = require("./api/categories/categories.routes");
-const recipesRoutes = require("./api/recipes/recipes.routes");
+const userRoutes = require("./api/users/users.routes");
+const passport = require("passport");
+const { localStrategy, jwtStrategy } = require("./middleware/passport");
 const cors = require("cors");
+const recipesRoutes = require("./api/recipes/recipes.routes");
 
 
 const app = express();
