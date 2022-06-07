@@ -4,5 +4,11 @@ const baseUrl = "http:localhost:8000";
 
 exports.fetchCategories = async (req, res) => {
   try {
-  } catch (error) {}
+
+    const categories = await Category.find();
+    res.json(categories);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+
 };
