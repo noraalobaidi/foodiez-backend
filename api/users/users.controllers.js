@@ -50,7 +50,7 @@ exports.signup = async (req, res) => {
 
 exports.getUsers = async (req, res) => {
   try {
-    const users = await User.find().populate("urls");
+    const users = await User.find();
     res.status(201).json(users);
   } catch (err) {
     res.status(500).json("Server Error");

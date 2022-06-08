@@ -5,8 +5,8 @@ const IngredientSchema = new Schema({
     type: String,
     unique: true,
   },
-  image: String,
-  recipes: [{ type: Schema.Types.ObjectId, ref: "Recipe" }],
+  // image: String,
+  // recipes: [{ type: Schema.Types.ObjectId, ref: "Recipe" }],
 });
 
 module.exports = model("Ingredient", IngredientSchema);
