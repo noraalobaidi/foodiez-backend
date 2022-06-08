@@ -11,6 +11,6 @@ router.post(
   passport.authenticate("local", { session: false }),
   signin
 );
-router.get("/users", getUsers);
+router.get("/user", getUsers);
 
 module.exports = router;
