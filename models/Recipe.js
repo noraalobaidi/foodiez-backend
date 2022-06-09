@@ -10,5 +10,9 @@ const RecipeSchema = new Schema({
       ref: "Ingredient",
     },
   ],
+  user : {
+    type: Schema.Types.ObjectId,
+    ref: "User",
+  },
 });
 module.exports = model("Recipe", RecipeSchema);
