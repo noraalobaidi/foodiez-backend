@@ -2,10 +2,12 @@ const express = require("express");
 
 const router = express.Router();
 
-const { fetchIngredients, createIngredient } = require("./ingredients.controllers");
+const {
+  fetchIngredients,
+  createIngredient,
+} = require("./ingredients.controllers");
 
-router.get("/fetchIngredients", fetchIngredients);
+router.get("/ingredients", fetchIngredients);
 router.post("/createIngredient", createIngredient);
-
 
 module.exports = router;
