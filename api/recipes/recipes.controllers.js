@@ -4,7 +4,9 @@ const User = require("../../models/User");
 exports.getRecipes = async (req, res) => {
   try {
       // $push: { ingredients: ingredient._id }
+
       const recipes = await Recipes.find().populate("ingredients")
+
       res.status(201).json(recipes);
       // console.log("Hello this is getAll");
     }
