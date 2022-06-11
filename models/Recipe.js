@@ -6,6 +6,7 @@ const RecipeSchema = new Schema({
   category: String,
   slug: String,
   steps: String,
+  ttp: String,
   ingredients: [
     {
       type: Schema.Types.ObjectId,
